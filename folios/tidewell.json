@@ -1,0 +1,19 @@
+{
+  "id": "tidewell",
+  "brand_name": "Tidewell",
+  "product_name": "Tidewell cucumber and lime sparkling drink",
+  "brand_colours": ["#2F6F8F", "#E9F2EC"],
+  "tone_notes": "Calm, fresh, coastal. Never preachy.",
+  "product_specs": "Craft sparkling drink in a 330ml can. Recipe still in development.",
+  "target_customer": "Adults looking for something different to drink at social events",
+  "approved_facts": ["Flavoured with cucumber and lime", "Comes in a 330ml can", "Lightly sparkling"],
+  "approved_claims": [],
+  "banned_claims": [
+    "Any health claim, such as hydrating, detoxing, boosting immunity or aiding digestion",
+    "Any guarantee that the drink is alcohol free or 0.0%, unless it is listed in the approved facts",
+    "Any launch date or price"
+  ],
+  "banned_words": ["detox", "healthy", "immunity", "alcohol free", "alcohol-free", "0.0%", "guaranteed"],
+  "channels": ["paid_social_square", "story_vertical"],
+  "audience_notes": "Adults 25 to 45 who are cutting back but still want a grown-up drink at social events."
+}

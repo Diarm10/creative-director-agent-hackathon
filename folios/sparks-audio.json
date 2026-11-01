@@ -1,0 +1,24 @@
+{
+  "id": "sparks-audio",
+  "brand_name": "Sparks Audio",
+  "product_name": "Sparks Pocket wireless earbuds",
+  "brand_colours": ["#1A7F64", "#F4F1EA", "#111111"],
+  "tone_notes": "Plain, upbeat, practical. Short sentences. No hype.",
+  "product_specs": "In-ear wireless earbuds with a pocket-sized charging case. USB-C charging.",
+  "target_customer": "Commuters who want earbuds that last the whole day",
+  "approved_facts": [
+    "The charging case holds three full charges of the earbuds",
+    "The earbuds play for up to 6 hours on one charge",
+    "The case charges over USB-C",
+    "The case fits in a jeans pocket"
+  ],
+  "approved_claims": ["Up to 24 hours of listening with the case"],
+  "banned_claims": [
+    "Any medical or health claim, such as protecting or improving hearing or treating tinnitus",
+    "Noise cancelling superlatives, such as the best noise cancelling or blocks all noise",
+    "Waterproof or sweatproof claims"
+  ],
+  "banned_words": ["cure", "medical", "clinically", "tinnitus", "best noise cancelling", "total silence", "waterproof"],
+  "channels": ["paid_social_square", "story_vertical", "in_store_poster"],
+  "audience_notes": "Urban commuters aged 20 to 40, mostly on public transport."
+}

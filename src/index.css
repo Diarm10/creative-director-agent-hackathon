@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cm-bg: #090909;
+  --cm-surface: #111111;
+  --cm-surface-raised: #181818;
+  --cm-hover: rgba(255, 255, 255, 0.04);
+  --cm-border: rgba(255, 255, 255, 0.07);
+  --cm-border-strong: rgba(255, 255, 255, 0.13);
+  --cm-text-primary: #e8e2da;
+  --cm-text-secondary: #888880;
+  --cm-text-muted: #6a6a64;
+  --cm-accent: #e05a30;
+  --cm-accent-hover: #c94e28;
+  --cm-accent-subtle: rgba(224, 90, 48, 0.1);
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--cm-bg);
+  color: var(--cm-text-primary);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--cm-accent); }
+button { font-family: inherit; }
+
+.btn-primary, .btn-ghost {
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary { background: var(--cm-accent); color: #fff; border: 1px solid var(--cm-accent); }
+.btn-primary:hover:not(:disabled) { background: var(--cm-accent-hover); }
+.btn-ghost { background: transparent; color: var(--cm-text-secondary); border: 1px solid var(--cm-border-strong); }
+.btn-ghost:hover:not(:disabled) { background: var(--cm-hover); color: var(--cm-text-primary); }
+.btn-primary:disabled, .btn-ghost:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.stage-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid var(--cm-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--cm-text-muted);
+}
+.stage-badge.active { background: var(--cm-accent-subtle); border-color: transparent; color: var(--cm-accent); }
+/* Approved is green, so it never looks like the orange "Check these". */
+.stage-badge.approved { background: rgba(34, 160, 90, 0.16); border-color: transparent; color: #1f9d55; }
+@media (prefers-color-scheme: dark) { .stage-badge.approved { color: #43d17f; } }
+
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--cm-accent); outline-offset: 1px; }

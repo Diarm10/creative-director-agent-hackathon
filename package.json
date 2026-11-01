@@ -1,0 +1,53 @@
+{
+  "name": "creative-director-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Creative Director Agent: a bounded design loop on Meta's Model API (Muse Spark, Muse Image, SAM 3.1) with Muse Spark Open on Baseten, as a web app and an MCP server.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "tsx --env-file=.env.local scripts/dev-api.ts",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b && tsc -p api/tsconfig.json --noEmit",
+    "test": "tsx --experimental-test-module-mocks --test tests/unit/*.test.mjs",
+    "test:ui": "node tests/ui/smoke.cjs",
+    "test:all": "npm run typecheck && npm run test && npm run test:ui",
+    "mcp": "tsx mcp/server.ts",
+    "strip-exif": "node scripts/strip-exif.mjs",
+    "placeholder": "tsx scripts/make-placeholder-product.ts",
+    "live": "tsx --env-file=.env.local scripts/live-run.ts",
+    "smoke:meta": "tsx --env-file=.env.local scripts/smoke-meta.ts",
+    "smoke:sam": "tsx --env-file=.env.local scripts/smoke-sam.ts",
+    "demo-assets": "tsx scripts/make-demo-assets.ts"
+  },
+  "dependencies": {
+    "@meta-sam/parser": "^0.1.0",
+    "@modelcontextprotocol/sdk": "1.27.1",
+    "@resvg/resvg-js": "^2.6.2",
+    "@vercel/node": "5.6.18",
+    "fflate": "^0.8.3",
+    "openai": "^7.43.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "satori": "^0.63.2",
+    "sharp": "^0.35.5",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "puppeteer-core": "^25.13.0",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "functions": {
+    "api/run.ts": {
+      "maxDuration": 300,
+      "includeFiles": "assets/fonts/**"
+    },
+    "api/check.ts": {
+      "maxDuration": 60
+    },
+    "api/effect.ts": {
+      "maxDuration": 60,
+      "includeFiles": "assets/fonts/**"
+    },
+    "api/items.ts": {
+      "maxDuration": 120
+    },
+    "api/pack.ts": {
+      "maxDuration": 60,
+      "includeFiles": "assets/fonts/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

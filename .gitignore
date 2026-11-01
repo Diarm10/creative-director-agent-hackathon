@@ -1,0 +1,22 @@
+node_modules
+dist
+.vercel
+.env
+.env.*
+!.env.example
+.demo-code.local
+*.local
+.DS_Store
+tmp
+out
+demo-assets/*.jpg
+demo-assets/*.jpeg
+demo-assets/*.png
+demo-assets/*.webp
+!demo-assets/README.md
+!demo-assets/mug.jpg
+
+# Local outputs of live checks and scratch work
+live-check/
+live-check-*.log
+*.log
