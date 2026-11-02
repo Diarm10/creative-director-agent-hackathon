@@ -48,15 +48,12 @@ The critic scores six parts (legibility, hierarchy, composition, brand fit, fide
 
 This is from the author's own log, which cannot be checked from this repository. Firepack is the author's live CRM SaaS, a separate private product that is not in this repository and is not needed to run it. Before kickoff, Firepack already had early drafts of a Meta API client, a SAM wrapper, two smoke scripts and a first agent loop. **None of those files were copied here.** Their replacements were written fresh from Meta's public Model API docs.
 
-Code first written in a Firepack branch on 26 and 27 Oct 2026 (after kickoff) and then ported here, with the database, login and marketplace features removed:
-
-- the layout and type engine (`src/lib/meta/design/`), the provider layer (`providers.ts`), the critic breakdown and parsing (`creativeDirectorPure.ts`), cut-out mask handling (`cutoutMask.ts`), revision (`revision.ts`), run-end rules (`runEnd.ts`), client memory (`memory.ts`), feedback safety, rows and export, and the single-ad run page components (`src/components/creative-director/`).
-
 Third party: the fonts in `assets/fonts` (Barlow Condensed and Inter, SIL Open Font Licence, licence files included) and the npm packages in `package.json`.
 
 ## Built during the hackathon (26 Oct to 4 Nov 2026)
 
 - **26 and 27 Oct:** the agent loop on Meta's Model API (plan, make, check, critique, revise), the Meta client and the SAM 3.1 cut-out wrapper (written fresh), the demo code gate and rate limits, folios without a database, browser-side feedback memory, the revise flow, the MCP server.
+- **Also 26 and 27 Oct, after kickoff:** the layout and type engine (`src/lib/meta/design/`), the provider layer (`providers.ts`), the critic breakdown and parsing (`creativeDirectorPure.ts`), cut-out mask handling (`cutoutMask.ts`), revision (`revision.ts`), run-end rules (`runEnd.ts`), client memory (`memory.ts`), feedback safety, rows and export, and the single-ad run page components (`src/components/creative-director/`). These were first written in a branch of the author's separate private product (Firepack), then copied into this repository with the database, login and marketplace features removed.
 - **28 Oct:** Catalogue mode (photo check, groups, Held back cards, approve and download), the cut-out sanity check, the overlap guard for type behind the product, the campaign pack, Looks, Themes and Effects.
 - **29 Oct:** the copy engine and its validators, editable headline and button text, Effect for all ads, nine more Themes and two more Looks, and the two rescues for held-back photos (Try anyway, Find items in this photo).
 - **1 Nov onwards:** the rewritten copy rules above, the measured part of the score, Look redraw (per card and for all finished ads), a Magazine Cover masthead, readable small type on effect backgrounds, the whole-photo fallback for a cut-out that lost part of the product, the Demo set, a run timer, and four ads at a time.
