@@ -6,6 +6,8 @@ Built for the Meta Global AI Developer Hackathon (Startup track, theme Build for
 
 **Live demo:** https://creative-director-agent.vercel.app
 
+Demo video: (link added at submission)
+
 Access needs a demo code. The code is given to the judges separately and is never stored in this repository: the server reads it from the `DEMO_CODE` environment variable and refuses every run when it is not set.
 
 ## What it does
@@ -109,7 +111,9 @@ For Claude Code: `claude mcp add creative-director --env MODEL_API_KEY=your-key 
 
 ## Known limits
 
-- Scores cluster around 7 because the critic is a model. Treat the score as a rough guide and read each ad before approving it.
+- Live runs need Meta Model API credits and, for the primary reviewer, a Baseten key. Without a Baseten key every step runs on Muse Spark 1.3 on Meta.
+- Scores cluster around 7 to 8 because the critic is a model. Treat the score as a rough guide and read each ad before approving it.
+- A full 5-ad campaign takes about 4 minutes, with four ads made at a time.
 - The photo check is a yes or no model call and is not perfectly consistent. That is what Try anyway is for.
 - A model check for a cut-out that lost part of the product (a plant without its pot) can miss.
 - A photo with a person or hand, a visible brand or logo, or a watermark is refused for good, on the page and on the server.
